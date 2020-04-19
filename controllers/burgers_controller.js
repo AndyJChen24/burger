@@ -16,11 +16,7 @@ router.get("/",(req,res)=>{
 })
 
 router.post("/api/burger", (req,res)=>{
-    burger.insertOne([
-        "burger_name"
-    ],[
-        req.body.burgerName
-    ],result=>{
+    burger.insertOne(req.body.name,result=>{
         res.json({id: result.insertId})
     })
 })

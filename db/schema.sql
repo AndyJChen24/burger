@@ -7,3 +7,7 @@ create table burgers(
     devoured boolean default false,
     primary key(id)
 )
+select * from burgers;
+
+insert into burgers(burger_name) values ("Big Mac");
+insert into burgers(burger_name) values ("Double Wopper");

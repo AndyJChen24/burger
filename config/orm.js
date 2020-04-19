@@ -8,9 +8,9 @@ const orm = {
             cb(res)
         })
     },
-    insertOne: function(value,cb){
-        const query = "INSERT INTO burgers VALUES(?)";
-        connection.query(query,[value], (err,res)=>{
+    insertOne: function(newBurger,cb){
+        const query = "INSERT INTO burgers(burger_name) VALUES(?)";
+        connection.query(query,[newBurger], (err,res)=>{
             if (err) throw err;
             cb(res)
         })
